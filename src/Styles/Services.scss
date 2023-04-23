@@ -1,0 +1,73 @@
+@use 'bases';
+
+._serv_main_container {
+  display: flex; 
+  padding: 2% 5%;
+  flex-direction: column;
+  background-color: rgba($color: bases.$golden, $alpha: 0.1);
+  
+
+  h3 {
+    text-align: justify;
+  }
+  ._serv_element {
+    width: 100%;
+
+    div{
+      width: 100%;
+      margin-bottom: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .element{
+        width: 50%;
+        height: auto;
+        
+        img{
+          width: 100%;
+        }
+        
+      }
+      .text {
+        width: 100%;
+
+        div{
+          display: block;
+          
+          .title {
+            font-size: 2rem;
+            font-weight: bold;
+          }
+
+          span{
+            display: block;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  ._serv_main_container {
+
+    ._serv_element {
+
+      div{
+        margin-bottom: 2%;
+        flex-direction: row;
+
+        .element{
+          width: 20%;
+        }
+
+        .text {
+          width: 80%;
+          padding-left: 5%;
+        }
+      }
+    }
+  }
+}
