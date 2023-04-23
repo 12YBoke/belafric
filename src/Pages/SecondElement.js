@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../Styles/secondElement.scss'
-import drc from '../Images/Belafric/Ship.svg'
 
 export class SecondElement extends Component {
 
