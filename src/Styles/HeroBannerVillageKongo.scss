@@ -1,183 +1,124 @@
 @use 'bases';
 
-%flex_box {
+._hbvk_cover_container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 5%;
-}
-
-%flex_box_children {
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-._hbvk_cover_container {
-  @extend %flex_box;
+  margin: 5% 0;
 
   ._hbvk_villageKongo_presentation {
-    @extend %flex_box_children;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
     &_logo {
-      display: block;
+      display: flex;
       width: 100%;
-      margin-bottom: 5%;
+      justify-content: center;
+      align-items: center;
+      height: 15vh;
       
       img {
-        width: 100%;
+        width: 80%;
         height: auto;
       }
     }
 
-    &_slogan {
-      font-weight: bold;
-      margin-left: 1%;
-    }
-  
     &_baseline {
-      display: block;
-      width: 100%;
-      margin-left: 1%;
-      text-align: justify;
-
-      >span {
-        color: bases.$golden;
-        cursor: pointer;
-        font-weight: bold;
-      }
-    }
-
-    ._hbvk_contact_items_img {
-      display: none;
-    }
-
-    ._hbvk_call_to_action {
-      width: 100%;
-      padding: 2% 0% 2% 0%;
-      cursor: pointer;
       display: flex;
-      align-items: center;
+      width: 90%;
       justify-content: center;
-      color: bases.$earth;
-      margin-top: 5%;
-      font-weight: bold;
-      border: 2px solid bases.$earth;
-      text-decoration: none;
+      align-items: center;
     }
 
-    ._hbvk_call_to_action:hover {
-      background-color: bases.$earth;
+    .link_button {
+      background-color: bases.$copper;
+      display: inline-block;
+      text-decoration: none;
       color: white;
+      margin-top: 8%;
+      padding: 4% 6%;
     }
   }
-  
+
   ._hbvk_villageKongo_image_container {
-    @extend %flex_box_children;
+    flex: 1;
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     ._hbvk_villageKongo_image_container {
-      width: 100%;
+      width: 90%;
       display: flex;
       justify-content: center;
 
       img {
         width: 100%;
-        border-radius: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
       }
     }
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* For desktop: */
-  %flex_box {
+  ._hbvk_cover_container {
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding: bases.$padding;
-  }
-
-  %flex_box_children {
-    height: 80vh;
-  }
-
-  ._hbvk_cover_container {
-    @extend %flex_box;
-    height: 100vh;
-
+    margin: 0 0;
+  
     ._hbvk_villageKongo_presentation {
-      @extend %flex_box_children;
-      flex: 1;
+      flex: 2;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
+      align-items: center;
       
       &_logo {
-        width: 80%;
-      }
-    
-      &_baseline {
-        width: 80%;
-      }
-
-      ._hbvk_contact_items_img {
-        margin-top: 5%;
-        width: 80%;
-        height: 12%;
         display: flex;
-        flex-direction: row;
+        width: 100%;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-
-        &_container {
-          height: 100%;
-          cursor: pointer;
-          text-align: center;
-
-          img{
-            height: 50%;
-            
-          }
-
-          &_info {
-            display: block;
-            overflow: hidden;
-
-            span {
-              display: block;
-              transform: translateY(-100%);
-              transition: transform 300ms ease-in-out;
-            }
-          }
-        }
-        &_container:hover {
-          span {  
-            transform: translateY(0%)
-          }
-        }
-      }
-
-      ._hbvk_call_to_action {
-        width: 80%;
-        margin-top: 2%;
+        height: 15vh;
         
+        img {
+          width: 60%;
+          height: auto;
+        }
       }
-
-      ._hbvk_call_to_action:hover {
-        background-color: bases.$earth;
+  
+      &_baseline {
+        display: flex;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .link_button {
+        background-color: bases.$copper;
+        display: inline-block;
+        text-decoration: none;
         color: white;
+        margin-top: 8%;
+        padding: 2% 4%;
       }
     }
-    
+  
     ._hbvk_villageKongo_image_container {
-      @extend %flex_box_children;
-      flex: 1;
+      flex: 3;
+      margin: 0%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      ._hbvk_villageKongo_image_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+  
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }

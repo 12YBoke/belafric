@@ -1,17 +1,15 @@
 @use 'bases';
 
 ._abtceo_main_container {
-  background-color: #eee;
-  padding: 5%;
+  padding: 5% 4%;
   align-items: center;
 
   div {
     width: 100%;
 
     img {
-      width: 100%;
+      width: 50%;
       height: auto;
-      border-radius: 20px;
     }
 
     ._abtceo_nameRA {
@@ -20,47 +18,34 @@
 
     span {
       display: block;
-      margin-bottom: 5%;
-      text-align: justify;
     }
 
     .pionniere {
       font-weight: bold;
     }
 
-    ._abtceo_call_to_action {
-      width: 100%;
-      padding: 2% 0% 2% 0%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: black;
-      margin-top: 10%;
-      font-weight: bold;
-      border: 2px solid black;
-      text-decoration: none;
-    }
-
-    ._abtceo_call_to_action:hover {
-      background-color: black;
-      color: white;
-    }
   }
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   ._abtceo_main_container {
+    padding: 5% 6%;
     display: flex;
-    height: 100vh;
-    padding: bases.$padding;
     justify-content: space-between;
-    text-align: justify;
+    align-items: flex-start;
 
-    div {
-      width: 22%;
-      height: 85%;
+    .part_one {
+      flex: 1;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .part_two {
+      flex: 2;
+      margin-left: 4%;
     }
   }
 }

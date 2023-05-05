@@ -1,4 +1,29 @@
 @use 'bases';
 
+.Parallax {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
+  .text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    display: block;
+  }
+  
+  .button {
+    margin-top: 2%;
+    display: block;
+    padding: 1% 4%;
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
+  }
 
+  .button:hover {
+    background-color: white;
+    color: bases.$red;
+  }
+}

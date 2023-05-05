@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import '../Styles/AboutCEO.scss'
-import { Link } from 'react-router-dom'
 import RegineAssani from '../Images/Belafric/ra.png'
 
 export class AboutCEO extends Component {
   render() {
     return (
       <div className='_abtceo_main_container'>
-        <div>
+        <div className='part_one'>
           <img src={RegineAssani} alt="RegineAssani"/>
           <span className='_abtceo_nameRA'>
             Mme. Régine Assani
@@ -20,8 +19,7 @@ export class AboutCEO extends Component {
             PIONNIÈRE DANS LE SERVICE DE FRET ENTRE LA BELGIQUE ET LA RDC
           </span>
         </div>
-        <div>
-          
+        <div  className='part_two'>
           <span>
             Régine ASSANI, est une femme d’affaires talentueuse, pointilleuse et dynamique.
             Après un cursus académique en commerce extérieur et gestion
@@ -37,14 +35,14 @@ export class AboutCEO extends Component {
             a réussi à fidéliser une clientèle de
             plus de 40 000 personnes.
           </span>
-        </div>
-        <div>
           <span>
-            Son secret réside, entre autres, dans sa politique
+          Son secret réside, entre autres, dans sa politique
             de proximité avec sa clientèle,
             toujours accessible pour écouter,
             comprendre leurs besoins, et répondre
-            promptement et efficacement ; dans
+            promptement et efficacement ; 
+          </span>
+          <span>dans
             la fixation de la grille tarifaire de ses
             services, dans un rapport prix-qualité
             hors toute concurrence et enfin, dans
@@ -53,8 +51,6 @@ export class AboutCEO extends Component {
             se départit jamais de son air radieux,
             qu’importe la circonstance.
           </span>
-        </div>
-        <div>
           <span>
             Riche de ses expériences et de la
             longévité de son activité, Régine Assani
@@ -67,9 +63,6 @@ export class AboutCEO extends Component {
             la diaspora qui souhaite lancer un projet
             en RD Congo.
           </span>
-          <Link to={'/APropos'} className='_abtceo_call_to_action'>
-            LIRE A PROPOS DE NOUS
-          </Link>
         </div>
       </div>
     )

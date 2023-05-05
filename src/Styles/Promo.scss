@@ -1,69 +1,59 @@
 @use 'bases';
-
-._prom_main{
+._prom_main_container {
   display: flex;
   flex-direction: column;
-  width: 98.5vw;
-  height: 100vh;
   align-items: center;
-  justify-content: center;
-  background-color: rgba($color: bases.$golden, $alpha: 0.1);
-  border-bottom: 4px solid white;
 
-  ._prom_intro {
-    font-size: 2rem;
-    display: block;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 2%;
-    color: bases.$red;
-  }
+  ._prom_main{
+    margin: 2% 0;
+    ._prom_intro {
+      font-size: 1.5rem;
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+    }
 
-  div {
-    overflow: hidden;
-    overflow-x: scroll;
-    display: block;
-    width : 80vw;
-    
-    table {
-      width: 100%;
-      tr{
-        cursor: pointer;
+    div {
+      overflow: hidden;
+      overflow-x: auto;
+      display: block;
+      width : 87vw;
+      
+      table {
+        margin: 0;
+        padding: 0;
+        border: 1px solid bases.$red;
 
-        th{
-          width: 15%;
-          background-color: bases.$red;
-          color: white;
-          padding-top: 1%;
-          padding-bottom: 1%;
-        }
+        tr{
+          cursor: pointer;
 
-        td{
-          text-align: center;
-          padding-top: 1%;
-          padding-bottom: 1%;
-          span{
+          th{
+            width: 15%;
+            background-color: bases.$red;
+            color: white;
+            padding-top: 1%;
+            padding-bottom: 1%;
+          }
+
+          td{
+            text-align: center;
+            padding-top: 1%;
+            padding-bottom: 1%;
             span{
-              display: block;
-              font-size: 0.8rem;
-              color: #888;
+              span{
+                display: block;
+                font-size: 0.8rem;
+                color: #888;
+              }
             }
           }
         }
+
+        tr:hover {
+          background-color : #d4d4d4;
+        }
       }
-
-      tr:hover {
-        background-color : #fff;
-      }
-    }
-  }
-}
-
-
-@media only screen and (min-width: 768px) {
-  ._prom_main {
-    div {
-      overflow-x: hidden;
     }
   }
 }

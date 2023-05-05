@@ -14,7 +14,6 @@ import APropos from '../Pages/APropos'
 import Erreur from '../Pages/Erreur'
 
 import House from '../Images/Icons/house.png'
-import Info from '../Images/Icons/info.png'
 import Place from '../Images/Icons/place.png'
 import Synchronize from '../Images/Icons/synchronize.png'
 
@@ -31,56 +30,43 @@ export class Navigation extends Component {
     this.state = {
       items : [
         {
-          label : <NavLink exact="true" to="/">
+          label : <NavLink exact="true" to="/" className='navlink'>
                     <span className='_n_img_container'>
                       <img src={House} alt="House"/>
                     </span>
                     <span className='_n_text_container'>
                       <span>
-                        Acceuil
+                        BELAFRIC
                       </span>
                     </span>
                     </NavLink>,
           key : 'Home' 
         },
         {
-          label : <NavLink exact="true" to="/Belafric">
-                    <span className='_n_img_container'>
-                      <img src={Synchronize} alt="Synchronize"/> 
-                    </span>
-                    <span className='_n_text_container'>
-                      <span>
-                        Belafric
-                      </span>
-                    </span>
-                  </NavLink>,
-          key : 'Belafric' 
-        },
-        {
-          label : <NavLink exact="true" to="/VillageKongo">
+          label : <NavLink exact="true" to="/VillageKongo" className='navlink'>
                     <span className='_n_img_container'>
                       <img src={Place} alt="Place"/>
                     </span>
                     <span className='_n_text_container'>
                       <span>
-                        Village Kongo
+                        VILLAGEKONGO
                       </span>
                     </span>
                   </NavLink>,
           key : 'VillageKongo' 
         },
         {
-          label : <NavLink exact="true" to="/APropos"> 
+          label : <NavLink exact="true" to="/Belafric" className='navlink'>
                     <span className='_n_img_container'>
-                      <img src={Info} alt="Info"/>
+                      <img src={Synchronize} alt="Synchronize"/> 
                     </span>
                     <span className='_n_text_container'>
                       <span>
-                        A Propos
+                        TARIFS
                       </span>
                     </span>
                   </NavLink>,
-          key : 'APropos' 
+          key : 'Belafric' 
         },
       ]
     }

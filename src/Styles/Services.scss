@@ -4,13 +4,8 @@
   display: flex; 
   padding: 2% 5%;
   flex-direction: column;
-  background-color: rgba($color: bases.$golden, $alpha: 0.1);
-  
 
-  h3 {
-    text-align: justify;
-  }
-  ._serv_element {
+  ._serv_element, ._serv_element_two {
     width: 100%;
 
     div{
@@ -19,8 +14,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .element{
-        width: 50%;
+        width: 100%;
         height: auto;
         
         img{
@@ -35,38 +31,73 @@
           display: block;
           
           .title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
           }
 
           span{
             display: block;
-            text-align: justify;
           }
         }
       }
     }
   }
+
+  
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   ._serv_main_container {
+    padding: 2% 6%;
 
     ._serv_element {
-
       div{
         margin-bottom: 2%;
         flex-direction: row;
+        align-items: flex-start;
 
         .element{
-          width: 20%;
+          width: 50%;
         }
 
         .text {
-          width: 80%;
           padding-left: 5%;
         }
+      }
+    }
+
+    ._serv_element_two {
+
+      .main {
+        display: inline-block;
+        width: 31%;
+        margin: 0 2% 2% 0 ;
+        vertical-align: top;
+
+        .element{
+
+          img{
+            width: 100%;
+          }
+        }
+
+        
+        .text {
+          div{
+            display: block;
+            
+            .title {
+              font-size: 1.5rem;
+              font-weight: bold;
+            }
+
+            span{
+              display: block;
+            }
+          }
+        }
+
       }
     }
   }

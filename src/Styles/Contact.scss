@@ -1,0 +1,9 @@
+@use 'bases';
+
+.Contact {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 6%;
+}

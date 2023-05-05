@@ -2,112 +2,59 @@
 
 %flex_box {
   display: flex;
-  align-items: center;
   flex-direction: column;
-}
-
-%flex_box_children {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 ._h_cover_container {
   @extend %flex_box;
   height: 90vh;
+  background-image: url('../Images/Belafric/conteneur.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 
   ._h_belafric_presentation {
-    @extend %flex_box_children;
-    padding: bases.$padding;
-
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
     &_slogan {
       font-weight: bolder;
-      font-size: 3.5rem;
+      font-size: 4rem;
+      color: #fff;
+      width: 100%;
+      background-color: rgba($color: bases.$red, $alpha: 0.8);
+      padding-top: 10%;
+      text-align: center;
     }
 
     &_baseline {
       display: block;
       width: 100%;
-      text-align: justify;
-
-      >span {
-        cursor: pointer;
-        font-weight: bold;
-      }
-    }
-
-    ._h_call_to_action {
-      width: 50%;
-      padding: 2% 0% 2% 0%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      border: 2px solid black;
-      text-decoration: none;
-      margin-top: 10%;
-      background-color: black;
-    }
-
-    ._h_call_to_action:hover {
-      background-color: black;
-      color: white;
+      text-align: center;
+      color: #fff;
+      padding-bottom: 10%;
+      background-color: rgba($color: bases.$red, $alpha: 0.8);
     }
   }
-  
-  ._h_belafric_image_container {
-    @extend %flex_box_children;
 
-    ._h_belafric_image_container_child {
-      width: 100%;
-      justify-content: center;
-    }
-  }
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-  %flex_box {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  }
-
-  %flex_box_children {
+  ._h_cover_container {  
     height: 90vh;
-  }
-
-  ._h_cover_container {
-    @extend %flex_box;
 
     ._h_belafric_presentation {
-      @extend %flex_box_children;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    
+      
+      &_slogan {
+        padding-top: 2%;
+      }
       &_baseline {
         width: 100%;
-      }
-
-      ._h_call_to_action {
-        color: black;
-        background-color: white;
-      }
-
-    }
-    
-    ._h_belafric_image_container {
-      @extend %flex_box_children;
-      flex: 2;
-      padding: bases.$padding;
-
-      ._h_belafric_image_container_child {
-        width: 100%;
+        padding-bottom: 2%;
+        text-align: center;
       }
     }
   }

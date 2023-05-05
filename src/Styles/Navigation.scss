@@ -63,7 +63,7 @@
     right: -100vw;
     width: 100vw;
     height: 100vh;
-    background-color: white;
+    background-color: rgba($color: white, $alpha: 0.95);
     padding-top: 8%;
     transition: 0.5s;
   
@@ -75,7 +75,7 @@
   
     li {
       display: block;
-      padding: 15px 0 0px bases.$space - 3vw;
+      padding: 15px 0 0px bases.$space - 2vw;
       align-items: center;
 
     }
@@ -130,11 +130,11 @@
   justify-content: space-between;
 
   ._n_title_div {
-    width: 20%;
+    flex: 1;
     justify-content: left;
 
     img{
-      width: 55%;
+      width: 20%;
     }
   }
 
@@ -151,27 +151,31 @@
   }
 
   .desktop {
-    display: block;
-    position: relative;
+    flex: 1;
+    display: flex;
     top: auto;
     height: auto;
     right: auto;
     width: auto;
     padding-top: 0;
-    background-color: white;
     transition: 0.5s;
   
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
   
     li {
-      display: inline-block;
-      padding: 0 0 0 bases.$space - 2vw;
-      align-items: center;
-      font-size: 1.4rem;
+      display: flex;
+      flex-direction: row;
+      width: 25%;
+      padding-left: 1%;
+      font-size: 1rem;
     }
   
     a {
@@ -180,11 +184,20 @@
       color: #888;
     }
 
+    .navlink {
+      border: 1px solid white;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+    }
+
     ._n_img_container {
-      display: inline-block;
-      height: 28px;
-      width: 28px;
+      display: block;
+      height: 22px;
+      width: 22px;
       overflow: hidden;
+      margin-right: 6%;
 
       img {
         width: 80%;
@@ -192,11 +205,13 @@
         vertical-align: middle;
         transform: translateY(100%);
         transition: transform 500ms ease-in-out;
+        display: flex;
+        width: 100%;
       }
     }
 
     ._n_text_container {
-      display: inline-block;
+      display: block;
       overflow: hidden;
 
       >span {

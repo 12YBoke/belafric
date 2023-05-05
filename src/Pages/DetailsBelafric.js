@@ -1,55 +1,73 @@
 import React, { Component } from 'react'
 import '../Styles/DetailsBelafric.scss'
+import Logistique from '../Images/Belafric/logistique.jpg'
+import Belafric from '../Images/Belafric/containerRed.jpg'
+import Conteneur from '../Images/Belafric/Belafric.jpeg'
 export class DetailsBelafric extends Component {
   render() {
     return (
       <div className='_dba_main_container'>
+        <span className='title_des'>BELAFRIC</span>
+        <span className='baseline_des'>FRET AERIEN ET MARITIME</span>
         <div className='_dba_main_container_child'>
           <div className='_dba_main_container_child_child'>
             <span className='_dba_main_container_child_child_content'>
+              
+              <span className='image_text'
+                style={{     
+                  backgroundImage: 'url(' + Conteneur + ')',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
+              </span>
               <span className='title_text'>
-                Notre vision
+                Qui sommes nous ?
               </span>
               <span className='content_text'>
-              Devenir prestataire numéro 1 de services pour les événements mondiaux aux quatre coins du globe en intégrant les quatre tendances les plus importantes qui ont eu un impact sur la logistique ces dernières années et qui vont également façonner l'industrie à l'avenir : La Mondialisation, la Digitalisation, le E-commerce et le Développement durable.
+                Nous sommes une agence spécialisée dans le transport de vos courriers et colis en toute sécurité et dans les délais depuis l'année 2001.
               </span>
             </span>
           </div>
           <div className='_dba_main_container_child_child'>
             <span className='_dba_main_container_child_child_content'>
-              <span className='title_text'>
-                Nous choisir
+              
+              <span className='image_text'
+                style={{     
+                  backgroundImage: 'url(' + Belafric + ')',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
               </span>
-              <span className='content_text'>
-                Nous sommes spécialisées dans le transport de vos courriers et colis. Nous proposons des services de transport aérien et maritime adaptés aux besoins des clients. Nous transportons vos courriers et colis en toute sécurité et dans le délai depuis 2001.
-              </span>
-            </span>
-          </div>
-        </div>
-        <div className='_dba_main_container_child'>
-        <div className='_dba_main_container_child_child'>
-            <span className='_dba_main_container_child_child_content'>
               <span className='title_text'>
                 Nos qualités
               </span>
               <span className='content_text'>
-              Nos qualités se resument en deux point : <br/>
+              Nos qualités se resument en deux points essentiels, qui sont : <br/>
               * Rapidité ;<br/>
-              * Fiabilité 
+              * Fiabilité. 
               </span>
             </span>
           </div>
           <div className='_dba_main_container_child_child'>
             <span className='_dba_main_container_child_child_content'>
+              <span className='image_text'
+                style={{     
+                  backgroundImage: 'url(' + Logistique + ')',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
+              </span>
               <span className='title_text'>
                 Nos services
               </span>
               <span className='content_text'>
-                Expédition colis :<br/>
-                * Bruxelles - Kinshasa par avion et par bateau.<br/>
+                Nous expédions vos courier et colis entre:<br/>
+                * Bruxelles - Kinshasa par avion et bateau.<br/>
                 * Kinshasa - Bruxelles par avion.<br/>
                 * Kinshasa - vers les provinces par avion.<br/>
-                Note : Scrollez vers le bas pour consulter l'ensemble de nos tarifs pour vos expéditions.
               </span>
             </span>
           </div>

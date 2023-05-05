@@ -1,17 +1,28 @@
 @use 'bases';
 
 ._dba_main_container {
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
-  
+  background-color: rgba($color: bases.$red, $alpha: 0.1);
+  padding: 5% 0;
+
+  .title_des {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+  }
+
+  .baseline_des {
+    text-align: center;
+    margin-bottom: 2%;
+    display: block;
+  }
+
   &_child {
     &_child {
       width: 100%;
-      color: black;
 
       &_content {
         height: auto;
-        text-align: justify;
         display: block;
         overflow: hidden;
         cursor: pointer;
@@ -20,7 +31,27 @@
         .title_text {
           display: block;
           font-weight: bold;
-          font-size: 2rem;
+          font-size: 1.2rem;
+        }
+        
+        .link_text {
+          background-color: bases.$copper;
+          display: inline-block;
+          text-decoration: none;
+          color: white;
+          margin-top: 4%;
+          padding: 4% 6%;
+        }
+
+        .image_text {
+          display: block;
+          height: 200px;
+          margin-bottom: 5%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         .content_text {
@@ -36,28 +67,30 @@
 ._dba_main_container {
   display: flex;
   justify-content: center;
-  height: 100vh;
   flex-direction: column;
+  padding: 5% 6%;
 
   &_child {
     display: flex;
-    height: 43%;
+    justify-content: space-between;
+    
 
     &_child {
-      width: 50vw;
       display: flex;
       flex-direction: row;
-      color: #888;
+      width: 32%;
 
       &_content {
-        height: 100%;
         width: 100%;
-        padding: bases.$padding;
+        padding: 10%;
+        height: 80%;
+        border: 1px solid #efefef;
+        background-color: white;
+        
+        .content_text {
+          display: block;
+        }
       }
-    }
-
-    &_child:hover {
-      color: black;
     }
   }
 }
